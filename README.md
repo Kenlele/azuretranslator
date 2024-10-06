@@ -1,0 +1,2 @@
+# azuretranslator
+AzureOCR+translator
