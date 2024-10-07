@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Recognition Sample</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="key.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<h1>圖案文字翻譯</h1>
+請輸入圖片網址或上傳圖片檔，接著選擇想要翻譯的語言，最後按下<strong>【取得原文與翻譯結果】</strong>按鈕
+
+<br><br>
+請輸入圖片網址:
+<input type="text" name="inputImage" id="inputImage"
+    value="https://truth.bahamut.com.tw/s01/201805/83e44834cdeea8352a8acf4d8cd9c046.PNG" />
+<!-- <button onclick="processImage()">Get Number</button> -->
+翻譯語言：
+         <select id="languageSelect">
+             <option value="zh-Hant">Chinese (Traditional)</option>
+             <option value="en">English</option>
+             <option value="ja">Japanese</option>
+             <option value="ko">Korean</option>
+         </select>
+
+<button id="thisButton">取得原文與翻譯結果</button>
+
+<br><br>
+<input type="file" name="inputImageFile" id="inputImageFile" data-target="file-uploader" accept="image/*">
+<br><br>
+<div id="RecognitionCardNumber"></div>
+<div id="wrapper" style="width:1020px; display:table;">
+    <div id="jsonOutput" style="width:600px; display:table-cell;">
+        Response:
+        <br><br>
+        <textarea id="responseTextArea" class="UIInput"
+                  style="width:580px; height:400px;"></textarea>
+    </div>
+    <div id="imageDiv" style="width:420px; display:table-cell;">
+        需要分析的圖片:
+        <br><br>
+        <img id="sourceImage" width="400" height="250" />
+        <!-- <p id="RecognitionCardNumber">XXXX XXXX XXXX XXXX</p> -->
+                   原文：
+         <p id="sRecognitionCardNumber"></p>
+                   翻譯：
+         <p id="translateResult"></p>
+         
+
+    </div>
+</div>
+</body>
+</html>
